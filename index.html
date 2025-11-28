@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalu Ch Sahu | DevOps & AKS Engineer</title>
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --bg-color: #0f172a; /* Dark Navy Background */
+            --card-bg: #1e293b;   /* Lighter Navy for cards */
+            --accent: #38bdf8;    /* Azure Blue */
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --font-mono: 'Courier New', Courier, monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        /* --- LAYOUT UTILITIES --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* THE COLLAGE GRID */
+        .grid-collage {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 1.5rem;
+        }
+
+        /* --- CARDS --- */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: transform 0.2s ease, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        h1, h2, h3 { color: #fff; margin-bottom: 0.5rem; }
+        h1 { font-size: 2.5rem; font-weight: 800; }
+        h2 { font-size: 1.5rem; color: var(--accent); }
+        p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; }
+        
+        /* --- GRID SPANS (The "Collage" Effect) --- */
+        .col-span-2 { grid-column: span 2; }
+        .col-span-3 { grid-column: span 3; }
+        .col-span-4 { grid-column: span 4; }
+        .row-span-2 { grid-row: span 2; }
+
+        /* --- SPECIFIC CARD STYLES --- */
+        
+        /* Hero Section */
+        .hero-card {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 1px solid var(--accent);
+        }
+        
+        .status-badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-family: var(--font-mono);
+        }
+
+        /* Tech Stack Tags */
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .tag {
+            background: #334155;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            border: 1px solid transparent;
+        }
+        .tag.azure { border-color: #0078D4; color: #0078D4; background: rgba(0, 120, 212, 0.1); }
+        .tag.cisco { border-color: #1BA0D7; }
+
+        /* Experience Timeline */
+        .timeline-item {
+            border-left: 2px solid var(--accent);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-date { font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono); }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #0f172a;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: auto;
+            text-align: center;
+        }
+        .btn:hover { background-color: #fff; }
+
+        /* --- RESPONSIVE MOBILE --- */
+        @media (max-width: 900px) {
+            .grid-collage { grid-template-columns: repeat(2, 1fr); }
+            .col-span-3, .col-span-4 { grid-column: span 2; }
+        }
+        @media (max-width: 600px) {
+            .grid-collage { grid-template-columns: 1fr; }
+            .col-span-2, .col-span-3, .col-span-4, .row-span-2 { grid-column: span 1; grid-row: span 1; }
+            h1 { font-size: 2rem; }
+            body { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="grid-collage">
+
+            <div class="card hero-card col-span-3">
+                <span class="status-badge">🚀 Open to Work</span>
+                <h1>Kalu Ch Sahu</h1>
+                <h2>DevOps Engineer & AKS Specialist</h2>
+                <p>
+                    Blending academic excellence with professional expertise. I am a 5th-semester Computer Science student at <strong>Gayatri College of Engineering</strong> and a Microsoft Certified Expert specializing in Azure Cloud, Kubernetes, and Automation.
+                </p>
+                <div class="tech-tags">
+                    <span class="tag azure">AZ-400 Expert</span>
+                    <span class="tag azure">AZ-204</span>
+                    <span class="tag azure">AZ-900</span>
+                    <span class="tag">NSDC Certified</span>
+                </div>
+            </div>
+
+            <div class="card row-span-2" style="text-align: center; align-items: center;">
+                <img src="https://via.placeholder.com/150" alt="Kalu Sahu" style="border-radius: 50%; width: 120px; height: 120px; margin-bottom: 1rem; border: 3px solid var(--accent);">
+                <h3>Contact</h3>
+                <p>kalu.sahu@example.com</p>
+                <a href="#" class="btn" style="width: 100%;">Download Resume</a>
+                <div style="margin-top: 1rem; display: flex; gap: 10px; justify-content: center;">
+                    <a href="#" style="color: white;">LinkedIn</a>
+                    <a href="#" style="color: white;">GitHub</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Current Role</h3>
+                <p style="color: var(--accent); font-weight: bold;">DevOps Engineer</p>
+                <p>Focusing on Azure Kubernetes Service (AKS), CI/CD pipelines, and Infrastructure as Code.</p>
+            </div>
+
+            <div class="card">
+                <h3>Previous Exp.</h3>
+                <p style="color: var(--accent); font-weight: bold;">Network Security</p>
+                <p>Experience with Aruba & Cisco networking, switching, and routing protocols.</p>
+            </div>
+
+            <div class="card col-span-2">
+                <h3>🎓 Education & Training</h3>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Present</div>
+                    <strong>B.Tech Computer Science</strong>
+                    <br>Gayatri College of Engineering (5th Semester)
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Completed</div>
+                    <strong>Master in Cloud Computing</strong>
+                    <br>NSDC & Jetking Institute
+                </div>
+            </div>
+
+            <div class="card col-span-2">
+                <h3>🛠 Technical Skills</h3>
+                <p>My toolkit for building and securing cloud infrastructure.</p>
+                <div class="tech-tags">
+                    <span class="tag">Azure Kubernetes Service (AKS)</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">CI/CD Pipelines</span>
+                    <span class="tag">Terraform</span>
+                    <span class="tag">Linux/Bash</span>
+                    <span class="tag">Network Security</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Git</span>
+                </div>
+            </div>
+
+            <div class="card col-span-4">
+                <h3>Featured Project: Cloud Migration & Automation</h3>
+                <p>
+                    Designed a secure pipeline to migrate on-premise applications to Azure AKS. Implemented automated scaling using Azure Monitor and secured traffic with Azure Application Gateway.
+                </p>
+                <div class="tech-tags">
+                    <span class="tag">Azure DevOps</span>
+                    <span class="tag">YAML</span>
+                    <span class="tag">Helm Charts</span>
+                </div>
+            </div>
+
+        </div> <footer style="text-align: center; margin-top: 3rem; color: var(--text-muted);">
+            <p>&copy; 2025 Kalu Ch Sahu. Built with Azure Expertise.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
